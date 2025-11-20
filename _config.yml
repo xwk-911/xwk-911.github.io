@@ -23,7 +23,7 @@ baseurl                  : "" # the subpath of your site, e.g. "/blog"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "251120.jpg"
+  avatar           : "251120.png"
   name             : "Wenkai Xing"
   pronouns         : # example: "she/her"  
   bio              : ""
