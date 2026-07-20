@@ -2,6 +2,8 @@
 title: "Major Revision at OOPSLA 2026"
 authors:
   - me
+  - Di Wang
+  - Zhenjiang Hu
 date: "2026-07-01T00:00:00Z"
 publishDate: "2026-07-01T00:00:00Z"
 publication_types:
