@@ -1,0 +1,39 @@
+title: "Wenkai Xing"
+baseURL: "https://xwk-911.github.io/"
+defaultContentLanguage: en
+hasCJKLanguage: true
+defaultContentLanguageInSubdir: false
+removePathAccents: true
+
+build:
+  writeStats: true
+
+enableGitInfo: false
+summaryLength: 30
+pagination:
+  pagerSize: 10
+enableEmoji: true
+enableRobotsTXT: true
+footnotereturnlinkcontents: <sup>^</sup>
+disableAliases: true
+outputs:
+  home: [HTML, RSS, headers, redirects, backlinks]
+  section: [HTML, RSS]
+imaging:
+  resampleFilter: lanczos
+  quality: 90
+  anchor: smart
+  hint: picture
+timeout: 600000
+taxonomies:
+  author: authors
+  tag: tags
+  publication_type: publication_types
+markup:
+  _merge: deep
+security:
+  _merge: deep
+sitemap:
+  changefreq: weekly
+  priority: 0.5
+  filename: sitemap.xml

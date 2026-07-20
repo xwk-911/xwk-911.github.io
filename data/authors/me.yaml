@@ -1,0 +1,63 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Wenkai Xing
+  given: Wenkai
+  family: Xing
+  alternate: 邢文凯
+  pronunciation: ""
+  pronouns: ""
+status:
+  icon: "💻"
+role: Ph.D. Student in Electronic Information
+bio: |
+  I am a Ph.D. student at Peking University and a member of the Programming Languages Lab, advised by Prof. Zhenjiang Hu. My research interests include programming languages, LLM-based program verification, and simplifying agent implementation.
+
+affiliations:
+  - name: Peking University
+    url: https://english.pku.edu.cn/
+  - name: Programming Languages Lab
+    url: https://pl.cs.pku.edu.cn/en/
+
+links:
+  - icon: at-symbol
+    url: mailto:kevinx@stu.pku.edu.cn
+    label: Email
+  - icon: brands/github
+    url: https://github.com/xwk-911
+    label: GitHub
+
+interests:
+  - Programming Languages
+  - Large Language Models
+  - Program Verification
+  - AI Agents
+
+education:
+  - degree: Ph.D. in Electronic Information
+    institution: Peking University
+    start: 2024-09-01
+    summary: Programming Languages Lab; advised by Prof. Zhenjiang Hu.
+  - degree: B.Eng. in Artificial Intelligence
+    institution: Huazhong University of Science and Technology
+    start: 2020-09-01
+    end: 2024-06-30
+
+skills:
+  - name: Research
+    items:
+      - label: Programming Languages
+        level: 5
+      - label: LLM Agents
+        level: 5
+      - label: Program Verification
+        level: 4
+
+languages:
+  - name: Chinese
+    level: 5
+    label: Native
+  - name: English
+    level: 4
+    label: Professional

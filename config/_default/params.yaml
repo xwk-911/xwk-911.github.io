@@ -1,0 +1,116 @@
+hugoblox:
+  schema: "2.0"
+
+  identity:
+    name: "Wenkai Xing"
+    organization: "Peking University"
+    type: person
+    tagline: "Ph.D. student working on programming languages, program verification, and LLM agents"
+    description: "Wenkai Xing is a Ph.D. student at Peking University researching programming languages, LLM-based program verification, and simplified agent implementation."
+    social:
+      twitter: ""
+
+  theme:
+    mode: system
+    pack: default
+    colors:
+      primary: indigo
+      secondary: cyan
+      neutral: slate
+
+  typography:
+    pack: academic
+
+  layout:
+    radius: lg
+    spacing: spacious
+    avatar_shape: rounded
+
+  header:
+    enable: true
+    style: navbar
+    sticky: true
+    align: center
+    search: true
+    theme_toggle: true
+    theme_picker: false
+    language_switcher: false
+    cta:
+      enable: false
+
+  footer:
+    style: minimal
+    language_switcher: false
+    text: "Programming Languages · LLM Agents · Program Verification"
+
+  copyright:
+    notice: "© {year} {name}"
+    license:
+      type: custom
+      allow_derivatives: false
+      share_alike: false
+      allow_commercial: false
+
+  seo:
+    title: "Wenkai Xing | Peking University"
+    ai:
+      allow:
+        - /
+      disallow: []
+      note: "Public academic profile and project portfolio of Wenkai Xing."
+      contact: "kevinx@stu.pku.edu.cn"
+
+  content:
+    math:
+      enable: true
+    toc:
+      enable: true
+    reading_time:
+      enable: false
+    citations:
+      style: ieee
+
+  search:
+    enable: true
+    suggestions:
+      - Wenkai Xing
+      - SuianCare
+      - RuleHook
+      - Program Verification
+    quick_actions: []
+
+  comments:
+    enable: false
+    provider: ""
+
+  analytics:
+    google:
+      measurement_id: ""
+
+  verification:
+    google: ""
+    bing: ""
+    baidu: ""
+    yandex: ""
+    pinterest: ""
+    naver: ""
+
+  repository:
+    enable: true
+    url: "https://github.com/xwk-911/xwk-911.github.io"
+    branch: master
+    content_dir: content
+
+  locale:
+    date_format: "Jan 2, 2006"
+    time_format: "3:04 PM"
+    address_format: en-us
+
+  privacy:
+    enable: false
+
+  debug:
+    enable: false
+
+  pro:
+    hide_attribution: false

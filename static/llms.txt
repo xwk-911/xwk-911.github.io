@@ -1,0 +1,15 @@
+# Wenkai Xing
+
+Wenkai Xing is a Ph.D. student at Peking University and a member of the Programming Languages Lab.
+
+Research interests:
+- Programming languages
+- Large language models
+- Program verification
+- Reliable AI agents
+
+Canonical homepage: https://xwk-911.github.io/
+GitHub: https://github.com/xwk-911
+Email: kevinx@stu.pku.edu.cn
+
+Public project pages and publication pages may be indexed and summarized with attribution to Wenkai Xing.

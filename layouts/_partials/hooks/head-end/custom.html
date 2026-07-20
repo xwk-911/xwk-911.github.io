@@ -1,0 +1,59 @@
+{{ if .IsHome }}
+{{ with resources.Get "media/authors/me.jpg" }}
+<style>
+  .avatar-wrapper {
+    height: auto !important;
+    aspect-ratio: {{ .Width }} / {{ .Height }};
+  }
+
+  .avatar-wrapper .avatar {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 0.75rem !important;
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const avatar = document.querySelector('.avatar-wrapper .avatar');
+    if (!avatar) return;
+
+    avatar.src = {{ .RelPermalink | jsonify | safeJS }};
+    avatar.removeAttribute('srcset');
+    avatar.removeAttribute('sizes');
+    avatar.removeAttribute('width');
+    avatar.removeAttribute('height');
+  });
+</script>
+{{ end }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "{{ .Site.BaseURL }}#wenkai-xing",
+  "name": "Wenkai Xing",
+  "alternateName": "邢文凯",
+  "url": "{{ .Site.BaseURL }}",
+  "email": "mailto:kevinx@stu.pku.edu.cn",
+  "jobTitle": "Ph.D. Student",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Peking University",
+    "url": "https://english.pku.edu.cn/"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Huazhong University of Science and Technology"
+  },
+  "sameAs": [
+    "https://github.com/xwk-911"
+  ],
+  "knowsAbout": [
+    "Programming Languages",
+    "Large Language Models",
+    "Program Verification",
+    "AI Agents"
+  ]
+}
+</script>
+{{ end }}

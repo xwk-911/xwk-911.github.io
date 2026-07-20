@@ -18,3 +18,23 @@ package-lock.json
 
 # Ignore folders related to IDEs
 .vscode/
+
+# Hugo build artifacts and caches
+public/
+resources/
+.hugo_build.lock
+hugo_stats.json
+**/assets/jsconfig.json
+
+# Pagefind generated indexes
+pagefind/
+static/pagefind/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# macOS metadata
+.DS_Store
+.jekyll-vendor/
