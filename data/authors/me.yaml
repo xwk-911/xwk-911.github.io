@@ -10,7 +10,7 @@ name:
   pronouns: ""
 status:
   icon: "💻"
-role: Ph.D. Student in Electronic Information
+role: Ph.D. Student
 bio: |
   I am a Ph.D. student at Peking University and a member of the Programming Languages Lab, advised by Prof. Zhenjiang Hu. My research interests include LLM inference engines, LLM-based program verification, and programming languages.
 
@@ -19,6 +19,7 @@ affiliations:
     url: https://english.pku.edu.cn/
   - name: Programming Languages Lab
     url: https://pl.cs.pku.edu.cn/en/
+  - name: kevinx@stu.pku.edu.cn
 
 links:
   - icon: at-symbol
