@@ -1,5 +1,5 @@
 ---
-title: "Major Revision at OOPSLA 2026"
+title: "EggATK: Semantic Goal Similarity for Training-Free Tactic Reuse via E-graphs"
 authors:
   - me
   - Di Wang
@@ -9,13 +9,17 @@ publishDate: "2026-07-01T00:00:00Z"
 publication_types:
   - paper-conference
 publication:
-  name: "ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications"
-  short_name: "OOPSLA 2026"
-summary: "A research work currently under major revision at OOPSLA 2026."
+  name: "Proceedings of the ACM on Programming Languages (OOPSLA 2026, Major Revision)"
+  short_name: "OOPSLA 2026 (Major Revision)"
+summary: "A training-free semantic goal similarity method combining e-graphs with approximate tree kernels for project-specific tactic reuse in interactive theorem proving."
+abstract: "With the increasing reasoning capabilities of large language models (LLMs), automated theorem proving based on these models has gradually gained attention. However, current approaches often rely on tactics encountered during pre-training and struggle with user-defined tactics and lemmas in practical verification projects. This paper proposes EggATK: we construct e-graphs incorporating rewrite rules that represent semantic equivalences, compute approximate tree kernel features for each e-class, and propagate these local similarities over the e-class dependency graph to obtain goal-level similarity."
 featured: true
+links:
+  - type: pdf
+    url: "/papers/eggatk-oopsla2026.pdf"
 tags:
   - Programming Languages
   - Program Verification
+  - Interactive Theorem Proving
+  - E-graphs
 ---
-
-More details will be added when the revision is complete.

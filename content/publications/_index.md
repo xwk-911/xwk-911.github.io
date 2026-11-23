@@ -1,7 +1,7 @@
 ---
 title: Publications
 cms_exclude: true
-view: citation
+view: publication-card
 banner:
   caption: ""
   image: ""

@@ -1,0 +1,77 @@
+{{ $item := .item }}
+{{ $year_value := $item.Params.event_start | default $item.Date }}
+{{ $year := (time $year_value).Format "2006" }}
+{{ $has_attachments := partial "functions/has_attachments" $item }}
+{{ $pub := partial "functions/resolve_publication.html" $item }}
+{{ $resource := partial "functions/get_featured_image.html" $item }}
+{{ $top_award := "" }}
+{{ with $item.Params.awards }}{{ $top_award = index . 0 }}{{ end }}
+
+{{/* Prefer direct PDF link when clicking title or thumbnail; fall back to publication page */}}
+{{ $link := $item.RelPermalink }}
+{{ $is_external := false }}
+{{ with $item.Params.links }}
+  {{ range . }}
+    {{ if and (eq .type "pdf") .url }}
+      {{ $link = .url }}
+      {{ $is_external = true }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<article class="group flex flex-col sm:flex-row gap-5 sm:gap-7 items-center sm:items-start p-5 sm:p-6 rounded-2xl bg-white dark:bg-zinc-900/90 ring-1 ring-zinc-200/80 dark:ring-zinc-800 shadow-sm hover:shadow-md transition-all duration-200">
+  {{/* Left: Paper Figure / Thumbnail */}}
+  {{ with $resource }}
+  <a href="{{ $link }}" {{ if $is_external }}target="_blank" rel="noopener"{{ end }} class="block w-full sm:w-64 md:w-72 shrink-0 overflow-hidden rounded-xl bg-white border border-zinc-200/80 dark:border-zinc-700/80 p-2">
+    <img
+      src="{{ .RelPermalink }}"
+      alt="{{ $item.Title | plainify }}"
+      loading="lazy"
+      decoding="async"
+      class="w-full h-auto max-h-44 object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+    />
+  </a>
+  {{ end }}
+
+  {{/* Right: Title, Authors, Venue, Summary, Links */}}
+  <div class="flex-1 min-w-0 flex flex-col gap-2">
+    <h3 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 leading-snug">
+      <a href="{{ $link }}" {{ if $is_external }}target="_blank" rel="noopener"{{ end }} class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+        {{ $item.Title }}
+      </a>
+    </h3>
+
+    <div class="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
+      {{ partial "page_metadata_authors" $item }}
+    </div>
+
+    <div class="flex flex-wrap items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
+      {{ with $pub.display_short }}
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-semibold bg-primary-50 text-primary-700 dark:bg-primary-900/40 dark:text-primary-300 ring-1 ring-inset ring-primary-600/15">
+          {{ . | markdownify }}
+        </span>
+      {{ end }}
+      {{ with $pub.display }}
+        <span class="italic">{{ . | markdownify }}</span>
+      {{ end }}
+      {{ if not (or $pub.display_short $pub.display) }}
+        <span>{{ $year }}</span>
+      {{ end }}
+      {{ with $top_award }}
+        <span>{{ partial "components/award_badge.html" (dict "award" . "page" $item "variant" "inline") }}</span>
+      {{ end }}
+    </div>
+
+    {{ with $item.Params.summary }}
+    <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mt-1">
+      {{ . | plainify }}
+    </p>
+    {{ end }}
+
+    {{ if $has_attachments }}
+    <div class="flex flex-wrap items-center gap-2 pt-2">
+      {{ partial "page_links" (dict "page" $item "is_list" 1) }}
+    </div>
+    {{ end }}
+  </div>
+</article>

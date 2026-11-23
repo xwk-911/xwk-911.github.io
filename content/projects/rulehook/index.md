@@ -3,7 +3,7 @@ title: RuleHook
 summary: A natural-language policy manager for enforcing engineering rules across Claude Code, Codex, and Cursor agent workflows.
 date: 2023-06-24
 weight: 30
-featured: true
+featured: false
 tags:
   - Developer Tools
   - AI Agents

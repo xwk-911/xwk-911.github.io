@@ -42,6 +42,7 @@ sections:
       filters:
         folders:
           - projects
+        featured_only: true
     design:
       view: article-grid
       fill_image: true
@@ -60,5 +61,5 @@ sections:
           - publications
         exclude_featured: false
     design:
-      view: citation
+      view: publication-card
 ---

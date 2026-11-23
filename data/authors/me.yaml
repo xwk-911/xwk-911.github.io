@@ -12,7 +12,7 @@ status:
   icon: "💻"
 role: Ph.D. Student in Electronic Information
 bio: |
-  I am a Ph.D. student at Peking University and a member of the Programming Languages Lab, advised by Prof. Zhenjiang Hu. My research interests include programming languages, LLM-based program verification, and simplifying agent implementation.
+  I am a Ph.D. student at Peking University and a member of the Programming Languages Lab, advised by Prof. Zhenjiang Hu. My research interests include LLM inference engines, LLM-based program verification, and programming languages.
 
 affiliations:
   - name: Peking University
@@ -29,12 +29,9 @@ links:
     label: GitHub
 
 interests:
+  - LLM Inference Engines
+  - LLM-based Program Verification
   - Programming Languages
-  - Large Language Models
-  - Program Verification
-  - AI Agents
-  - IoT
-  - AI Infra
 
 education:
   - degree: Ph.D. in Electronic Information
